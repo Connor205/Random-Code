@@ -17,3 +17,4 @@ for i in tqdm(range(50)):
  # Print List
 print(goodList)
 
+# Testing Terminal
