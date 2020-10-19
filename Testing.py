@@ -1,4 +1,3 @@
-
 def printFib():
 	FibList = []
 	FibList.append(0)
@@ -9,4 +8,4 @@ def printFib():
 	# print(len(FibList))
 
 if __name__ == '__main__':
-	printFib()
+  printFib()
