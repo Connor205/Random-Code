@@ -10,11 +10,18 @@ html = urlopen("https://abbreviations.yourdictionary.com/articles/state-abbrev.h
 bsObj = BeautifulSoup(html, "html.parser")
 # Get the list objects
 linkedList = bsObj.findAll('li')
-goodList = []
+for i in range(len(linkedList)):
+	linkedList[i] = linkedList[i].text
+# print(linkedList)
+indexAL = linkedList.index("Alabama - AL")
+# print(indexAL)
+indexWY = linkedList.index("Wyoming - WY")
+linkedList = linkedList[indexAL : indexWY]
+print(linkedList)
 # Take first 50 and put them in a list
-for i in tqdm(range(50)):
-	goodList.append(linkedList[i].text)
+# for i in tqdm(range(100)):
+# 	goodList.append(linkedList[i].text)
  # Print List
-print(goodList)
+#print(goodList)
 
 # Testing Terminal
