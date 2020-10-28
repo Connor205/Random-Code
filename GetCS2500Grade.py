@@ -14,7 +14,7 @@ username.click()
 username.send_keys("connornelson")
 password = driver.find_element_by_id("user_password")
 password.click()
-password.send_keys("Panthers@05205")
+password.send_keys("************")
 login = driver.find_element_by_name("commit")
 login.click()
 cs2500 = driver.find_element_by_link_text("CS2500: Fundamentals of Computer Science I")
@@ -59,4 +59,3 @@ print("Current Grade: ", grade)
 
 
 
- 
