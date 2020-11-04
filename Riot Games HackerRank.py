@@ -1,14 +1,12 @@
-#!/bin/python3
-
 import math
 import os
 import random
 import re
 import sys
 
-
 import fileinput
 # Complete the 'PrintGardenLayout' function below.
+
 
 def PrintGardenLayout():
     # Write your code here
@@ -17,26 +15,25 @@ def PrintGardenLayout():
         if (lineNum == 0):
             comma = line.index(',')
             x = int(line[0:comma])
-            y = int(line[comma+1:len(line)])
+            y = int(line[comma + 1:len(line)])
             garden = [['B' for i in range(x)] for j in range(y)]
         else:
             firstComma = line.index(',')
-            numbers = line[firstComma + 1: len(line)]
+            numbers = line[firstComma + 1:len(line)]
             secondComma = numbers.index(',')
             yCoord = numbers[0:secondComma]
-            xCoord = numbers[secondComma + 1: len(numbers)]
+            xCoord = numbers[secondComma + 1:len(numbers)]
             garden[int(xCoord)][int(yCoord)] = line[0]
         lineNum += 1
     for row in garden:
         s = ""
         for value in row:
-            s+= value
-        print (s)
-
-#!/bin/python3
+            s += value
+        print(s)
 
 
 # Complete the 'PrintGardenLayoutWithIdealSeats' function below.
+
 
 def PrintGardenLayoutWithIdealSeats():
     # Write your code here
@@ -46,14 +43,14 @@ def PrintGardenLayoutWithIdealSeats():
         if (lineNum == 0):
             comma = line.index(',')
             x = int(line[0:comma])
-            y = int(line[comma+1:len(line)])
+            y = int(line[comma + 1:len(line)])
             garden = [['B' for i in range(x)] for j in range(y)]
         else:
             firstComma = line.index(',')
-            numbers = line[firstComma + 1: len(line)]
+            numbers = line[firstComma + 1:len(line)]
             secondComma = numbers.index(',')
             yCoord = numbers[0:secondComma]
-            xCoord = numbers[secondComma + 1: len(numbers)]
+            xCoord = numbers[secondComma + 1:len(numbers)]
             garden[int(xCoord)][int(yCoord)] = line[0]
         lineNum += 1
     flowersSeen = [[0 for i in range(x)] for j in range(y)]
@@ -68,33 +65,33 @@ def PrintGardenLayoutWithIdealSeats():
                 walled = False
                 for k in range(i + 1):
                     if (not walled):
-                        if(garden[i-k][j] == 'F'):
-                            count +=1
-                        if (garden[i-k][j] == 'W'):
+                        if (garden[i - k][j] == 'F'):
+                            count += 1
+                        if (garden[i - k][j] == 'W'):
                             walled = True
                 #To Right
                 walled = False
                 for k in range(len(garden[0]) - i - 1):
                     if (not walled):
-                        if(garden[i+k][j] == 'F'):
-                            count +=1
-                        if (garden[i+k][j] == 'W'):
+                        if (garden[i + k][j] == 'F'):
+                            count += 1
+                        if (garden[i + k][j] == 'W'):
                             walled = True
                 #Above
                 walled = False
                 for k in range(j + 1):
                     if (not walled):
-                        if (garden[i][j-k] == 'F'):
-                            count+= 1
-                        if (garden[i][j-k] == 'W'):
-                            walled = True     
+                        if (garden[i][j - k] == 'F'):
+                            count += 1
+                        if (garden[i][j - k] == 'W'):
+                            walled = True
                 #Below
                 for k in range(len(garden) - j - 1):
                     if (not walled):
-                        if (garden[i][j+k] == 'F'):
-                            count+= 1
-                        if (garden[i][j+k] == 'W'):
-                            walled = True 
+                        if (garden[i][j + k] == 'F'):
+                            count += 1
+                        if (garden[i][j + k] == 'W'):
+                            walled = True
                 flowersSeen[i][j] = count
             else:
                 flowersSeen[i][j] = -1
@@ -114,9 +111,5 @@ def PrintGardenLayoutWithIdealSeats():
     for row in garden:
         s = ""
         for value in row:
-            s+= str(value)
-        print (s)
-
-if __name__ == '__main__':
-
-if __name__ == '__main__':
+            s += str(value)
+        print(s)
