@@ -2,14 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import getpass as getP
 import time 
+import os
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 usernameStr = str(input("Username: "))
 passwordStr = getP.getpass("Password: ")
 
-
-print(passwordStr)
-driver = webdriver.Chrome('/home/conn205/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome(os.environ['SELENIUM_DRIVER'], options=chrome_options)
 driver.get("https://handins.ccs.neu.edu/login")
 username = driver.find_element_by_id("user_username")
 username.click()
