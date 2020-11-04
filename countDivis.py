@@ -1,9 +1,20 @@
-if __name__ == "__main__":
-	currentCount = 0
-	for x in range(500):
-		val = x + 1
-		if (val % 2 == 0 or val % 3 == 0 or val % 11 == 0):
-			currentCount += 1
-	print(currentCount)
+def listOfDivis(start: int, end: int, toInclude: list, toExclude: list):
+    results = []
+    for i in range(start, end + 1):
+        include = False
+        for inVal in toInclude:
+            if i % inVal == 0:
+                include = True
+        for ex in toExclude:
+            if i % ex == 0:
+                include = False
+        if include:
+            results.append(i)
+    return (len(results), results)
 
-  		
+
+if __name__ == "__main__":
+    includeA = [2, 3, 11]
+    answerA = listOfDivis(1, 500, includeA, [])
+    print(answerA[0])
+    print(answerA[1])
