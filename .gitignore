@@ -5,3 +5,4 @@ GetCS2500Grade\ with\ password.py
 .DS_Store
 debug.log
 /.vscode
+testingPrivate.py
