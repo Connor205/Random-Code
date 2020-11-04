@@ -1,7 +1,7 @@
 import sys
 from itertools import *
 def main():
-  prob6()
+  prob2ii()
 
 # Python code to clone or copy a list
 # Using the in-built function extend()
@@ -43,7 +43,7 @@ def prob2ii():
   print(matching/total)
   return matching/total
 
-def prob2ii():
+def prob2iii():
   # List of all ways to permute the remaining 5 numbers numbers
   listOfPerms = list(permutations([1,3,6,8,9], 5))
   listMatching = []
@@ -68,8 +68,6 @@ def prob4i():
   print(lessThan6)
   print(len(lessThan6))
 
-def main():
-  prob4i()
 
 if __name__ == "__main__":
   main()
