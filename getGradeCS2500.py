@@ -1,20 +1,23 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-import getpass
+import getpass as getP
+import time 
 chrome_options = Options()
-# chrome_options.add_experimental_option("detach", True)
-# username = str(input("Username: "))
-# password = str(getpass.getpass())
-# print(username)
-# print(password)
-driver = webdriver.Chrome('/Users/ConnorNelson/Downloads/chromedriver', options=chrome_options)
+chrome_options.add_experimental_option("detach", True)
+usernameStr = str(input("Username: "))
+passwordStr = getP.getpass("Password: ")
+
+
+print(passwordStr)
+driver = webdriver.Chrome('/home/conn205/chromedriver.exe', options=chrome_options)
 driver.get("https://handins.ccs.neu.edu/login")
 username = driver.find_element_by_id("user_username")
 username.click()
-username.send_keys("connornelson")
+username.send_keys(usernameStr)
 password = driver.find_element_by_id("user_password")
 password.click()
-password.send_keys("************")
+password.send_keys(passwordStr)
+time.sleep(3)
 login = driver.find_element_by_name("commit")
 login.click()
 cs2500 = driver.find_element_by_link_text("CS2500: Fundamentals of Computer Science I")
