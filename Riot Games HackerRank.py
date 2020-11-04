@@ -32,19 +32,11 @@ def PrintGardenLayout():
         for value in row:
             s+= value
         print (s)
-            
+
 #!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
 
 
 # Complete the 'PrintGardenLayoutWithIdealSeats' function below.
-import fileinput
 
 def PrintGardenLayoutWithIdealSeats():
     # Write your code here
@@ -64,7 +56,6 @@ def PrintGardenLayoutWithIdealSeats():
             xCoord = numbers[secondComma + 1: len(numbers)]
             garden[int(xCoord)][int(yCoord)] = line[0]
         lineNum += 1
-    
     flowersSeen = [[0 for i in range(x)] for j in range(y)]
     filled = False
 
