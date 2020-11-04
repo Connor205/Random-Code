@@ -2,6 +2,7 @@ import numpy as np
 
 array = [["X", "O", ""],["X", "O", ""],["X", "O", ""]]
 print(np.matrix(array))
+print(array)
 
 # There are two ways I would recommend doing this. 
 # The first way is using numpy. 
