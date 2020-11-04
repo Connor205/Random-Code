@@ -1,7 +1,7 @@
 import sys
 from itertools import *
 def main():
-  prob6()
+  prob1A() 
 
 # Python code to clone or copy a list
 # Using the in-built function extend()
@@ -52,6 +52,7 @@ def prob2B(): # This will not run because there are some 20 trillion options it 
         if newArr not in arrs:
           arrs.append(newArr)
   print(len(arrs))
+
 # Python function to print permutations of a given list
 def permutation(lst):
 
@@ -129,7 +130,7 @@ def prob4():
   print(len(output))
 
 def prob6():
-  count = 0;
+  count = 0
   for i in range(0,6):
     count += countP(5,i)
   print(count)
