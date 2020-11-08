@@ -1,0 +1,120 @@
+4'b0000: begin		//C5
+	timer = timer + 1'b1;
+	countlow = 47778;
+	counthigh = 95556;
+	sevensegLetter = 4'b1100;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 1 ) begin
+		state =  4'b0001;
+	end
+end
+4'b0001: begin		//D5
+	timer = timer + 1'b1;
+	countlow = 42565;
+	counthigh = 85131;
+	sevensegLetter = 4'b1101;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 2 ) begin
+		state =  4'b0010;
+	end
+end
+4'b0010: begin		//E5
+	timer = timer + 1'b1;
+	countlow = 37921;
+	counthigh = 75842;
+	sevensegLetter = 4'b1110;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 3 ) begin
+		state =  4'b0011;
+	end
+end
+4'b0011: begin		//F5
+	timer = timer + 1'b1;
+	countlow = 35793;
+	counthigh = 71586;
+	sevensegLetter = 4'b1111;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 4 ) begin
+		state =  4'b0100;
+	end
+end
+4'b0100: begin		//G5
+	timer = timer + 1'b1;
+	countlow = 31888;
+	counthigh = 63776;
+	sevensegLetter = 4'b0110;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 5 ) begin
+		state =  4'b0101;
+	end
+end
+4'b0101: begin		//A5
+	timer = timer + 1'b1;
+	countlow = 28409;
+	counthigh = 56818;
+	sevensegLetter = 4'b1010;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 6 ) begin
+		state =  4'b0110;
+	end
+end
+4'b0110: begin		//B5
+	timer = timer + 1'b1;
+	countlow = 25309;
+	counthigh = 50619;
+	sevensegLetter = 4'b1011;
+	sevensegNumber = 4'b0101;
+	if (timer > 50000000 * 7 ) begin
+		state =  4'b0111;
+	end
+end
+4'b0111: begin		//C6
+	timer = timer + 1'b1;
+	countlow = 23889;
+	counthigh = 47778;
+	sevensegLetter = 4'b1100;
+	sevensegNumber = 4'b0110;
+	if (timer > 50000000 * 8 ) begin
+		state =  4'b1000;
+	end
+end
+4'b1000: begin		//D6
+	timer = timer + 1'b1;
+	countlow = 21282;
+	counthigh = 42564;
+	sevensegLetter = 4'b1101;
+	sevensegNumber = 4'b0110;
+	if (timer > 50000000 * 9 ) begin
+		state =  4'b1001;
+	end
+end
+4'b1001: begin		//E6
+	timer = timer + 1'b1;
+	countlow = 18960;
+	counthigh = 37921;
+	sevensegLetter = 4'b1110;
+	sevensegNumber = 4'b0110;
+	if (timer > 50000000 * 10 ) begin
+		state =  4'b1010;
+	end
+end
+4'b1010: begin		//F6
+	timer = timer + 1'b1;
+	countlow = 17896;
+	counthigh = 35793;
+	sevensegLetter = 4'b1111;
+	sevensegNumber = 4'b0110;
+	if (timer > 50000000 * 11 ) begin
+		state =  4'b1011;
+	end
+end
+4'b1011: begin		//G6
+	timer = timer + 1'b1;
+	countlow = 15943;
+	counthigh = 31887;
+	sevensegLetter = 4'b0110;
+	sevensegNumber = 4'b0110;
+	if (timer > 50000000 * 12 ) begin
+		state =  4'b1100;
+	end
+end
