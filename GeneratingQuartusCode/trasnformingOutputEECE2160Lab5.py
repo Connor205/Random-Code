@@ -1,7 +1,4 @@
 def main():
-	"""
-	
-	"""
     f = open("toScrape.txt", "r")
     lines = f.readlines()
     strOutput = {}
