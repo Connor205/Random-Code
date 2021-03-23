@@ -23,7 +23,7 @@ def generateBinaryStringSolution(binaryString):
     """Generates the series of steps used to collapse a given binary string.
 
     Args:
-        binaryString ([bool]): The binary string to be collapsed 
+        binaryString ([bool]): The binary string to be collapsed
 
     Returns:
         [int]: A list of ints representing the moves in order from left to right
