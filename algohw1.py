@@ -1,3 +1,6 @@
+import timeit
+
+
 def createList(startingString):
     output = []
     for i in startingString:
@@ -28,7 +31,36 @@ def generateBinaryStringSolution(binaryString):
     return toReturn
 
 
-testingString = "10000101"
-testingString2 = "11111111111"
-testList = createList(testingString2)
-print(generateBinaryStringSolution(testList))
+def testBinaryString():
+    testingString2 = "0" * 50 + "1" + "0" * 50 + "11"
+    testList = createList(testingString2)
+    start = timeit.default_timer()
+    print(generateBinaryStringSolution(testList))
+
+    stop = timeit.default_timer()
+
+    print('Time: ', stop - start)
+
+
+def generateValuesForSpyNetwork(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 0
+    if n == 2:
+        return 2
+    return n + generateValuesForSpyNetwork(
+        n / 2) + generateValuesForSpyNetwork(n - n / 2)
+
+
+def testSpy():
+    for i in [2, 4, 8, 16, 32, 64]:
+        print(generateValuesForSpyNetwork(i))
+
+
+def main():
+    testSpy()
+
+
+if __name__ == "__main__":
+    main()
