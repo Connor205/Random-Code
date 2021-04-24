@@ -1,0 +1,33 @@
+\begin{table}[H]
+        \centering
+        \resizebox{\textwidth}{!}
+        {%
+                \begin{tabular}{| L | L | L | L |}
+                        \hline
+                        & \text{rectangular} & \text{polar A} & \text{polar B} \\ \hline
+                        a & 3+j5 & 5.83/1.03 & 5.83e^{j1.03} \\ \hline
+                        b & -2-J6 & 6.32/4.39 & 6.32^{j4.39} \\ \hline
+                        c & -1-j2 & 2.236/4.2487 & 2.236e^{j4.248} \\ \hline
+                        d & -10-j3 & 10.44/3.433 & 10.44e^{3.433} \\ \hline
+                        e & (x+s)+j(y+t) & \sqrt{(x+s)^2+(y+t)^2}/\arctan((x+s)/(y+t)) & \sqrt{(x+s)^2+(y+t)^2}e^{j\arctan((x+s)/(y+t))} \\ \hline
+                        f & (s-x)+j(t-y) & \sqrt{(s-x)^2+(t-y)^2}/\arctan((s-x)/(t-y)) & \sqrt{(s-x)^2+(t-y)^2}e^{j\arctan((s-x)/(t-y))} \\ \hline
+                        g & 8+j2 & 8.246/14.036 & 8.246e^{j14.036} \\ \hline
+                        h & 10-10i & 14.14/1.57 & 14.14e^{j1.57} \\ \hline
+                        i & 12-12i & 16.97/-.785 & 16.97e^{j-.785} \\ \hline
+                        j & j130 & 130/1.57 & 130e^{j1.57} \\ \hline
+                        k & 2.54+j4.54 & 5.2/1.06 & 5.2e^{j1.06} \\ \hline
+                        l & 3.54-j2.46 & 4.31/-.61 & 4.31e^{j-.61} \\ \hline
+                        m & -7-j & 7.07/3.28 & 7.07e^{j3.28} \\ \hline
+                        n & -4i & 4/-1.57 & 4e^{j-1.57} \\ \hline
+                        o & -.4=j.4 & .57/-2.36 & .57e^{j-2.36} \\ \hline
+                        p & -.33-j.33 & .47/-2.36 & .47e^{j-2.36} \\ \hline
+                        q & -.59+i.59 & .83/2.36 & .83e^{j2.36} \\ \hline
+                        r & -.354-j.354 & .5/3.93 & .5e^{j3.93} \\ \hline
+                        s & u^2*cos(2θ)+ju^2*sin(2θ) & u^2/2θ & u^2e^{j2θ} \\ \hline
+                        t & u^3*cos(3θ)+ju^2*sin(3θ) & u^3/3θ & u^3e^{j3θ} \\ \hline
+                        u & -88.72+j88.72 & 125.47/2.36 & 125.47e^{j2.36} \\ \hline
+                        v & 2+j2 & 2.83/.79 & 2.83e^{j.79} \\ \hline
+                \end{tabular}%
+        }
+        \caption{caption}
+\end{table}
